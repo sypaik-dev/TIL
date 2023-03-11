@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>005 flex</title>
+    <style>
+      .flex-container {
+        display: flex;
+        border: 3px solid #5c5c5c;
+        background-color: #acacac;
+        /* margin: 0 auto 20px; */
+        height: 150px;
+      }
+
+      .flex-item {
+        background-color: #ffd1d1;
+        border: 3px solid #f09e9e;
+
+        flex-grow: 1;
+        flex-basis: 1300px;
+      }
+
+      .flex.item:first-child {
+        order: 1;
+      }
+      .flex-item:nth-child(2) {
+        order: -1;
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+    </style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">A</div>
+      <div class="flex-item">B</div>
+      <div class="flex-item">C</div>
+    </div>
+    <div class="flex-container">
+      <div class="flex-item">A</div>
+      <div class="flex-item">B</div>
+      <div class="flex-item">C</div>
+      <div class="flex-item">D</div>
+      <div class="flex-item">E</div>
+      <div class="flex-item">F</div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src=""></script>
+  </body>
+</html>

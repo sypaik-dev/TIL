@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>002 flex</title>
+    <style>
+      .flex-container {
+        background-color: #c9c6c6;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .left-side,
+      .center,
+      .right-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .flex-item {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .blue {
+        background-color: lightblue;
+      }
+
+      .pink {
+        background-color: pink;
+      }
+
+      .khaki {
+        background-color: khaki;
+      }
+
+      .right-side {
+        flex-direction: column-reverse;
+      }
+    </style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="left-side">
+        <div class="flex-item blue">A</div>
+        <div class="flex-item pink">B</div>
+        <div class="flex-item khaki">C</div>
+      </div>
+      <div class="center">
+        <div class="flex-item blue">D</div>
+        <div class="flex-item khaki">E</div>
+      </div>
+      <div class="right-side">
+        <div class="flex-item blue">F</div>
+        <div class="flex-item pink">G</div>
+        <div class="flex-item khaki">H</div>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script src=""></script>
+  </body>
+</html>
