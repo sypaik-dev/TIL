@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex layout</title>
+    <style>
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        color: #fff;
+        width: 500px;
+        height: 600px;
+        gap: 20px;
+      }
+
+      header {
+        background-color: #f09e9e;
+        flex-basis: 200px;
+      }
+
+      .wrap2 {
+        display: flex;
+        flex-basis: 300px;
+        gap: 20px;
+      }
+
+      section {
+        background-color: lightblue;
+        flex-grow: 1;
+      }
+
+      aside {
+        background-color: khaki;
+        flex-grow: 1;
+      }
+
+      footer {
+        background-color: navy;
+        flex-basis: 200px;
+      }
+    </style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>header</header>
+      <div class="wrap2">
+        <section>section &gt; article</section>
+        <aside>aside</aside>
+      </div>
+      <footer>footer</footer>
+    </div>
+    <!-- JavaScript -->
+    <script src=""></script>
+  </body>
+</html>
