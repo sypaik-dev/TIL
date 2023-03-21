@@ -1,0 +1,78 @@
+body {
+  background-color: rgb(223, 247, 255);
+  padding: 0;
+  margin: 0;
+  font-family: "Bebas Neue", cursive;
+}
+
+h1,
+h2,
+a,
+img,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.card-item {
+  width: 288px;
+  /* height: 348px; */
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.card-item img {
+  width: 288px;
+  height: 196px;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.card-text {
+  padding: 25px 16px 19px 16px;
+  color: #29363d;
+}
+
+.card-text h2 {
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text h2 + p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #5a6a72;
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  height: 40px;
+  margin: 12px 0 16px;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 24px;
+  /* gap: 24px; */
+  width: min(1224px, 100% - 60px);
+  margin: auto;
+  /* justify-content: center; */
+}
