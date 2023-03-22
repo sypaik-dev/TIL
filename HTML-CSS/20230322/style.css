@@ -1,0 +1,180 @@
+body,
+header,
+h1,
+button,
+form,
+input,
+a,
+span,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  @font-face {
+    font-family: "SpoqaHanSansNeo-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+.modal {
+  max-width: 520px;
+  box-sizing: border-box;
+}
+
+.modal h1 {
+  position: relative;
+  padding: 20px 0 18px 0;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.btn-close {
+  width: 16px;
+  height: 16px;
+  background: url(./images/close.png) no-repeat center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 22px 24px 0 0;
+}
+
+.login-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.login-title::after {
+  content: ")";
+}
+
+.login-container {
+  padding: 26px 24px;
+}
+
+.login-container input {
+  width: 472px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.login-container input:nth-child(2) {
+  margin-bottom: 17px;
+}
+
+.login-container input::placeholder {
+  font-size: 16px;
+  color: #767676;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.login-hold::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #767676;
+}
+
+.loginHold {
+  display: block;
+  color: #767676;
+  margin-bottom: 21px;
+}
+
+.btn-login {
+  background: #2f80ed;
+  border-radius: 5px;
+  color: #fff;
+  padding: 14px 0;
+  text-align: center;
+  display: block;
+  width: 472px;
+  margin-bottom: 20px;
+}
+
+.sub-area {
+  font-size: 14px;
+  color: #767676;
+  text-align: center;
+  margin-bottom: 37px;
+}
+
+.sub-area a:first-child::after {
+  content: "|";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-left: 12px;
+  margin-right: 12px;
+  color: #767676;
+}
+
+span::after {
+  content: "";
+  display: inline-block;
+  width: 210px;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background: #c4c4c4;
+}
+
+span::before {
+  display: inline-block;
+  content: "";
+  width: 210px;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background: #c4c4c4;
+}
+
+.btn-social button {
+  padding: 15px 0;
+  width: 472px;
+  color: #767676;
+  border-radius: 5px;
+  border: 1px solid #767676;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.or {
+  margin-bottom: 29px;
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
