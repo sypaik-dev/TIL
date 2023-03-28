@@ -1,0 +1,21 @@
+$sooyeon1: #000;
+$sooyeon2: #b8e9ff;
+// 한글 변수를 권장하지 않습니다.
+// 고유 명사 같은 경우는 한글 변수를 사용할 수 있습니다.
+
+$수연: rgb(243, 195, 245);
+$큰글자: 34px;
+
+.one {
+  font-size: $큰글자;
+  color: $sooyeon2;
+}
+
+.two {
+  background-color: $sooyeon2;
+  color: $sooyeon1;
+}
+
+.three {
+  color: $수연;
+}
