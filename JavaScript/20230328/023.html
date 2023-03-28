@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기념일 계산기2</title>
+    <style></style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h1>객체(Obj)</h1>
+    <h2 id="love">0일째</h2>
+    <p id="valentine">0일 남음</p>
+    <!-- JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var now = new Date();
+      var start = new Date("2020-06-30");
+
+      var timeDiff = now.getTime() - start.getTime();
+      var day = Math.floor(timeDiff / (1000 * 60 * 60 * 24) + 1);
+      $("#love").text(day + "일째");
+      console.log(day);
+
+      var valentine = new Date("2023-02-14");
+      var timeDiff2 = valentine.getTime() - now.getTime();
+      var day2 = Math.floor(timeDiff2 / (1000 * 60 * 60 * 24) + 1);
+      $("#valentine").text(day2 + "일 남음");
+    </script>
+  </body>
+</html>

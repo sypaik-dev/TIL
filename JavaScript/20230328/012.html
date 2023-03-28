@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자기소개 글자수 세기4</title>
+    <style></style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!-- 키보드를 누를 때마다 글자수를 셀 것 -->
+    <textarea
+      onkeydown="counter();"
+      class="form-control"
+      cols="30"
+      rows="10"
+      id="jasoseol"
+    >
+저는 백수연입니다 꺄우</textarea
+    >
+    <span id="count">(0/200)</span>
+    <!-- JavaScript -->
+    <script>
+      function counter() {
+        var content = document.getElementById("jasoseol").value;
+        document.getElementById("count").innerHTML =
+          "(" + content.length + "/200)";
+      }
+      counter();
+    </script>
+  </body>
+</html>
