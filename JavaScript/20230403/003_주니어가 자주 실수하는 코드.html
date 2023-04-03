@@ -11,15 +11,9 @@
     <link rel="stylesheet" href="" />
   </head>
   <body>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, temporibus
-      ipsam harum odio saepe, ducimus labore officiis pariatur magnam minus
-      quas? Et, aperiam tempora nihil quidem ipsa molestiae ab officiis.
-    </p>
-
-    <!-- JavaScript -->
-    <script>
-      window.alert("hello world");
-    </script>
+    <!-- script는 다른 태그에 있어도 변수를 공유합니다. var로 선언할 경우 덮어써서
+    견고한 코드를 작성하는데 방해가 됩니다. let, const를 사용해주세요 -->
+    <script src="a.js"></script>
+    <script src="b.js"></script>
   </body>
 </html>
