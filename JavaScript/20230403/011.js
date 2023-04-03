@@ -1,51 +1,60 @@
 // json generator
 // https://json-generator.com/
-//json
+// json
 let 회원정보 = [
   {
-    _id: "642a623de347699d6d60fad3",
+    _id: "642a621f2445e5a2787864e4",
     index: 0,
     age: 36,
     eyeColor: "green",
-    name: "Monroe Gould",
+    name: "Compton Landry",
     gender: "male",
-    company: "NSPIRE",
+    company: "AQUASURE",
   },
   {
-    _id: "642a623d3a11b1ac89ccfd9b",
+    _id: "642a621fc17e143f4b1d444f",
     index: 1,
-    age: 38,
-    eyeColor: "green",
-    name: "Camacho Blair",
+    age: 33,
+    eyeColor: "brown",
+    name: "Maldonado Crosby",
     gender: "male",
-    company: "MULTRON",
+    company: "INSURON",
   },
   {
-    _id: "642a623db9d9f8fc406eb15a",
+    _id: "642a621fe4fde914944aaa7e",
     index: 2,
-    age: 23,
-    eyeColor: "green",
-    name: "Mercado Elliott",
-    gender: "male",
-    company: "EBIDCO",
+    age: 27,
+    eyeColor: "blue",
+    name: "Lynnette House",
+    gender: "female",
+    company: "BUZZMAKER",
   },
   {
-    _id: "642a623d76d575540511f336",
+    _id: "642a621f68c4e87bb043e14f",
     index: 3,
     age: 40,
     eyeColor: "blue",
-    name: "Valeria Casey",
-    gender: "female",
-    company: "SQUISH",
+    name: "Mitchell Hancock",
+    gender: "male",
+    company: "FIBEROX",
   },
   {
-    _id: "642a623de2cccd081c0c81c9",
+    _id: "642a621f820fb16a23d61f07",
     index: 4,
-    age: 24,
+    age: 35,
     eyeColor: "blue",
-    name: "Martinez Becker",
+    name: "Audra Vance",
+    gender: "female",
+    company: "BRAINQUIL",
+  },
+  {
+    _id: "642a621fd7e886a78a2d2a6f",
+    index: 5,
+    age: 40,
+    eyeColor: "blue",
+    name: "Griffith Tanner",
     gender: "male",
-    company: "EARGO",
+    company: "ENERSAVE",
   },
 ];
 
@@ -53,6 +62,7 @@ let 회원정보 = [
 회원정보[0]["name"];
 회원정보[1]["company"];
 
+// 모르셔도 됩니다.
 let 나이평균 =
   (회원정보[0]["age"] +
     회원정보[1]["age"] +

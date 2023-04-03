@@ -27,7 +27,7 @@ console.log(isNaN(null)); // false
 console.log(isNaN(NaN)); // true
 console.log("---");
 
-// ES6에서 추가 도입(암기)
+// ES6에서 추가 도입(암기)(*)
 console.log(Number.isNaN(undefined)); // false
 console.log(Number.isNaN(null)); // false
 console.log(Number.isNaN(NaN)); // true
@@ -35,18 +35,18 @@ console.log(Number.isNaN(NaN)); // true
 /*
 // https://www.designcise.com/web/tutorial/what-is-the-difference-between-isnan-and-number-isnan-in-javascript
 
-x                Number(x)    isNaN(x)
-undefined        NaN            true
-{}                NaN            true
-'foo'            NaN            true
-new Date('')    NaN            true
-new Number(0/0)    NaN            true
+x	            Number(x)	isNaN(x)
+undefined	    NaN	        true
+{}	            NaN	        true
+'foo'	        NaN	        true
+new Date('')	NaN	        true
+new Number(0/0)	NaN	        true
 
 
 x               typeof x === 'number'   Number.isNaN(x)
-undefined        false                    false
-{}                false                    false
-'foo'            false                    false
-new Date('')    false                    false
-new Number(0/0)    false                    false
+undefined	    false	                false
+{}	            false	                false
+'foo'	        false	                false
+new Date('')	false	                false
+new Number(0/0)	false	                false
 */
