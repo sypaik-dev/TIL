@@ -45,15 +45,31 @@ const human = {
   askingHim: function () {
     console.log("hello world!");
   },
-  0: "01050442903",
 };
 
 human.name = "jun";
+human.name;
+human.askingHim();
+delete human.job;
 
-// 함수와 메서드의 차이점?
-// 메서드는 클래스 안에서 사용되는 함수!
-// .을 찍어 접근할 수 있는 함수다? => 메서드
-// 함수를 호출할 수 있는 이름은 결국 변수입니다.
+// 다른 언어와 동작방식이 달라 주의해주세요.
+console.log("age" in human);
+// console.log(20 in [10, 20, 30, 40]);
+// console.log('length' in [10, 20, 30, 40]);
 
-let x = console.log;
-x("hello");
+const aespa = {
+  members: ["카리나", "윈터", "지젤", "닝닝"],
+  from: "광야",
+  sing: function () {
+    return "적대적인 고난과 슬픔은 널 더 popping 진화시켜!";
+  },
+};
+
+// 별표(**)
+console.log(aespa.hasOwnProperty("itzy"));
+console.log(aespa.hasOwnProperty("sing"));
+
+// 별표(***)
+// 다른 언어는 aespa.keys()와 같은 방식으로 사용합니다.
+console.log(Object.keys(aespa)); // 불편한 코드입니다.
+console.log(Object.values(aespa)); // 불편한 코드입니다.
