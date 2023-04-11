@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style></style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <p></p>
+    <input type="text" />
+    <button>Write Something!</button>
+    <!-- JavaScript -->
+    <script>
+      const myBtn = document.querySelector("button");
+      const myP = document.querySelector("p");
+      const myInput = document.querySelector("input");
+
+      myBtn.addEventListener("click", function () {
+        // myP.innerHTML = myInput.value;
+        myP.innerHTML = myInput.value;
+        // 문자열로 HTML을 생성할 수 있다!
+      });
+
+      // innerHTML은 text의 HTML 요소가 있나 보면서 판단
+      // innerText는 요소의 렌더링 된
+      // textContent는 텍스트만 그냥 보냄 (처리 속도 가장 빠름)
+    </script>
+  </body>
+</html>
