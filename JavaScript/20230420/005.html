@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>requestAnimationFrame 사용</title>
+    <style>
+      .box {
+        background-color: pink;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        border: 1px solid #ddd;
+        transition: 0.2s;
+      }
+
+      .box {
+        font-size: 5px;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+      }
+    </style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div class="box">Hi</div>
+    <!-- 내 코드 -->
+    <script>
+      //   const box = document.querySelector(".box");
+      //   let position = 0;
+
+      //   function left() {
+      //     position -= 10;
+      //     box.style.left = position + "px";
+      //   }
+
+      //   function right() {
+      //     position += 10;
+      //     box.style.right = position + "px";
+      //   }
+
+      //   box.addEventListener("keydown", (e) => {
+      //     if (e.keyCode === "left") {
+      //       left();
+      //     } else if (e.keyCode === "right") {
+      //       right();
+      //     }
+      //   });
+
+      const target = document.querySelector("div");
+      let pos = 0;
+
+      document.addEventListener("keydown", move);
+
+      function move(event) {
+        const keyName = event.key;
+        console.log(keyName);
+
+        if (keyName === "ArrowRight") {
+          pos += 5;
+          target.style.transform = `translateX(${pos}px)`;
+        } else if (keyName === "ArrowLeft") {
+          pos -= 5;
+          target.style.transform = `translateX(${pos}px)`;
+        }
+    </script>
+  </body>
+</html>
