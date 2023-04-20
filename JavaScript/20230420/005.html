@@ -28,8 +28,10 @@
   </head>
   <body>
     <div class="box">Hi</div>
-    <!-- 내 코드 -->
+
     <script>
+      /* 내 코드 */
+
       //   const box = document.querySelector(".box");
       //   let position = 0;
 
@@ -51,22 +53,56 @@
       //     }
       //   });
 
+      /* 강사님 코드 */
+
       const target = document.querySelector("div");
       let pos = 0;
+      // 사용자가 어떤 키를 눌렀는지 정보를 저장하는 객체
+      let keys = {};
+
+      // 사용자가 키를 눌렀을때 실행
+      function move(event) {
+        keys[event.key] = true;
+        console.log(keys);
+      }
+
+      // 사용자가 키에서 손을 땔 때 실행
+      function stop(event) {
+        keys[event.key] = false;
+        console.log(keys);
+      }
 
       document.addEventListener("keydown", move);
+      document.addEventListener("keyup", stop);
 
-      function move(event) {
-        const keyName = event.key;
-        console.log(keyName);
+      // function move(event) {
+      //     const keyName = event.key;
+      //     console.log(keyName);
 
-        if (keyName === "ArrowRight") {
+      //     if (keyName === 'ArrowRight') {
+      //         pos += 5;
+      //         target.style.transform = `translateX(${pos}px)`;
+      //     } else if (keyName === 'ArrowLeft') {
+      //         pos -= 5;
+      //         target.style.transform = `translateX(${pos}px)`;
+      //     }
+      // }
+
+      function play() {
+        if (keys.ArrowRight) {
           pos += 5;
           target.style.transform = `translateX(${pos}px)`;
-        } else if (keyName === "ArrowLeft") {
+        }
+
+        if (keys.ArrowLeft) {
           pos -= 5;
           target.style.transform = `translateX(${pos}px)`;
         }
+
+        requestAnimationFrame(play);
+      }
+
+      play();
     </script>
   </body>
 </html>
