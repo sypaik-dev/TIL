@@ -2,6 +2,7 @@ import './App.css';
 import Menu from './components/menu/Menu.jsx'
 import NewMenu from './components/newMenu/NewMenu.js'
 import Time from './components/time/Time.jsx'
+import List from './components/list/List.jsx'
 
 function TextArea() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Menu />
       <TextArea />
       <Time />
+      <List />
       {100 + 1}
       {`${[1, 2, 3]}`}
       {'hello' + 'world'}
