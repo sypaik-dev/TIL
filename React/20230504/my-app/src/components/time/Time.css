@@ -1,0 +1,14 @@
+.wrap {
+    background-color: black;
+    color: #fff
+}
+
+.second {
+    background-color: #fff;
+    color: #000;
+}
+
+.year {
+    color: red;
+    font-weight: bold
+}
