@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레이어 팝업</title>
+  <!-- <link rel="stylesheet" href="popup.css"> -->
+  <style>
+ /* reset */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.btn-open {
+  width: 100px;
+  height: 36px;
+  border-radius: 40px;
+
+  border: 0;
+  background-color: #d97652;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup {
+  width: 300px;
+  height: 240px;
+  background-color: #f2e9d8;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: none;
+}
+
+/* 검은 배경 */
+.dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.popup.active,
+.popup.active + .dim {
+  display: block;
+}
+
+.menu li {
+  border-bottom: 1px solid #fff;
+}
+.menu li a {
+  display: block;
+  padding: 10px;
+}
+
+.btn-close {
+  border: 0;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.btn-close img {
+  width: 100%;
+  display: block;
+}
+
+  </style>
+</head>
+
+<body>
+  <h1>레이어 팝업(Layer Popup)</h1>
+
+  <button class="btn-open" type="button">메뉴 열기</button>
+  <article class="popup">
+    <h2 class="a11y-hidden">전체 메뉴</h2>
+    <ul class="menu">
+      <li><a href="#">위니브</a></li>
+      <li><a href="#">멋쟁이 사자처럼</a></li>
+      <li><a href="#">FES 5기</a></li>
+    </ul>
+    <button class="btn-close" type="button">
+      <img src="./x.svg" alt="닫기">
+    </button>
+  </article>
+  <div class="dim"></div>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quis, voluptatum quisquam, veniam natus incidunt sint molestiae sunt quam itaque, expedita maiores temporibus asperiores? Aliquid saepe aperiam vitae ab doloribus?</p>
+
+</body>
+<script>
+    const article = document.querySelector(".popup");
+const openBtn = document.querySelector(".btn-open");
+const closeBtn = article.querySelector(".btn-close");
+
+// 첫번째 포커스 요소
+const firstEl = article.querySelector("a");
+
+function openPopup() {
+  article.classList.add("active");
+  firstEl.focus();
+}
+
+function closePopup() {
+  article.classList.remove("active");
+}
+
+openBtn.addEventListener("click", openPopup);
+closeBtn.addEventListener("click", closePopup);
+closeBtn.addEventListener("keydown", function (e) {
+  // console.log(e.key);
+  if (!e.shiftKey && e.key === "Tab") {
+    // console.log("tab만 누름");
+    e.preventDefault();
+    firstEl.focus();
+  }
+});
+
+firstEl.addEventListener("keydown", function (e) {
+  if (e.shiftKey && e.key === "Tab") {
+    // console.log("shift + tab");
+    e.preventDefault();
+    closeBtn.focus();
+  }
+});
+</script>
+</html>
