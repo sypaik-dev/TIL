@@ -1,5 +1,6 @@
-import DisplayMood from './Components/DisplayMood/DisplayMood'
-import MenuList from './Components/MenuList/MenuList'
+import { useState } from "react";
+import DisplayMood from "./Components/DisplayMood/DisplayMood";
+import MenuList from "./Components/MenuList/MenuList";
 
 function App() {
 
@@ -7,8 +8,8 @@ function App() {
 
   return (
     <div>
-      <MenuList />
-      <DisplayMood />
+      <MenuList mood={currentMood} onItemClick={setCurrentMood} />
+      <DisplayMood mood={currentMood} />
     </div>
   );
 }
