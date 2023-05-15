@@ -2,6 +2,7 @@ import RouteStudy from './RouterSolve/RouteStudy';
 import RouteSolve from './RouterSolve/RouteSolve';
 import Counter from './HookUseEffect/TryUseEffect';
 import Time from './HookUseEffect/Quiz2'
+import Counter2  from './HookUseRef/TryUseRef'
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
       {/* <RouteStudy/> */}
       {/* <RouteSolve/> */}
       {/* <Counter/>  */}
-       <Time/>
+       {/* <Time/> */}
+       <Counter2 />
     </div>
   );
 }
