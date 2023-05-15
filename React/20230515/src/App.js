@@ -3,6 +3,7 @@ import RouteSolve from './RouterSolve/RouteSolve';
 import Counter from './HookUseEffect/TryUseEffect';
 import Time from './HookUseEffect/Quiz2'
 import Counter2  from './HookUseRef/TryUseRef'
+import TryUseRefDom from './HookUseRef/TryUseRefDom'
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       {/* <RouteSolve/> */}
       {/* <Counter/>  */}
        {/* <Time/> */}
-       <Counter2 />
+       {/* <Counter2 /> */}
+       <TryUseRefDom />
     </div>
   );
 }
