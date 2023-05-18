@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 
-export function useMouseLocation(iniVal) {
+export default function useMouseLocation(iniVal) {
     const [mouseLocation, setMouseLocation] = useState(iniVal || { x: 0, y: 0 });
 
     useEffect(() => {
@@ -12,3 +12,5 @@ export function useMouseLocation(iniVal) {
 
     return mouseLocation
 }
+
+
